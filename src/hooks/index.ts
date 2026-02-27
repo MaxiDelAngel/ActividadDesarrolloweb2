@@ -1,0 +1,1 @@
+export { default as usePokemons } from './usePokemons' //Exporta el hook personalizado usePokemons desde el archivo usePokemons.tsx

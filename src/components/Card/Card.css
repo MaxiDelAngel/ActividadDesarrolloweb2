@@ -1,0 +1,74 @@
+.card {
+    margin: 10px;
+    max-width: 480px;
+    background: linear-gradient(135deg, #1b1b1b, #2a2a2a);
+    color: #f2f2f2;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.65);
+}
+
+.card.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card img {
+    height: 150px;
+    width: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.card p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    color: #d3d3d3;
+}
+
+.card span {
+    background: linear-gradient(135deg, #67c9ff, #4d8bff);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.1rem;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.card span:hover {
+    transform: scale(1.07);
+    background: linear-gradient(135deg, #4db8ff, #3a6fff);
+}
+
+.card-evo {
+    border: 2px solid #ff4d4d;
+    box-shadow: 0 0 15px rgba(255, 80, 80, 0.7);
+}
+
+.card-normal {
+    border: 2px solid #4da6ff;
+    box-shadow: 0 0 15px rgba(80, 150, 255, 0.6);
+}
