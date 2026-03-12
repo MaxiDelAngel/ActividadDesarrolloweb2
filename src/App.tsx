@@ -1,15 +1,15 @@
 import './App.css'
-import {Title} from "./components"
-import {Card} from "./components"
+import {Title, Card, Search} from "./components"
 import { usePokemons } from './hooks'
 
 
 function App() {
-  const { pokemons, evolucionar} = usePokemons()
+  const { pokemons, evolucionar, setFiltro } = usePokemons()
 
   return (
     <>
       <Title texto="Pokemons" />
+      <Search alEscribir={(valor) => setFiltro(valor)} />
       {
         pokemons.map(pokemon => (
           <Card 

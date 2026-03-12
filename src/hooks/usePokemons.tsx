@@ -4,7 +4,7 @@ import type { Pokemon } from '../types'
 const usePokemons = () => {
     //manejo de estado
     //const [pokemons,setPokemons] = useState(POKEMON_MOCK)
-
+    const [filtro, setFiltro] = useState("")
     const [pokemons,setPokemons] = useState<Pokemon[]>([])
 
     const traerPokemons = async () => {
@@ -36,7 +36,9 @@ const usePokemons = () => {
         setPokemons(prev => prev.map(p=>p.id===id?{...p, estado: !p.estado}:p)) //Actualiza el estado del pokemon con el id correspondiente, invirtiendo su estado actual
     }
 
-    return { pokemons, evolucionar }
+    const PokemonFiltrado = pokemons.filter(p => p.nombreBase.toLowerCase().includes(filtro.toLowerCase()) || p.nombreEvo.toLowerCase().includes(filtro.toLowerCase()))
+
+    return { pokemons: PokemonFiltrado, evolucionar, setFiltro }
 }
 
 export default usePokemons
